@@ -1,0 +1,27 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    font-size: large; /* Ajustez la taille selon vos préférences */
+}
+
+.content {
+    background-color: grey; /* Ajustez la couleur selon vos préférences */
+    color: white;
+    padding: 20px;
+}
+
+.projects {
+    /* Styles pour la section des projets */
+}

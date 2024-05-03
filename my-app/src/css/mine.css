@@ -7,11 +7,13 @@
 }
 
 body {
+    overflow: hidden;
     /* color:black; */
     font-family: "Fira Sans", Arial, sans-serif;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    /* border: 1vh solide white; */
   }
   
   header {
@@ -20,6 +22,12 @@ body {
     /* background-color: #a4a4a4; */
     /* padding: 20px 0; */
     text-align: center;
+
+    border-bottom: 4px solid
+
+    /* border-bottom-width: 5px; */
+    /* border-bottom: 1cm; */
+    /* border-color: rgb(207, 0, 0); */
   }
   
   .header-content {
@@ -31,12 +39,31 @@ body {
   }
   
   .logo img{
-    height: 15vh; /* Adjust the size as needed */
+    height: 14.5vh; /* Adjust the size as needed */
     /* margin-right: 32.5vw; */
     margin-left: 3vw;
+    margin-right: 20vw;
+    margin-bottom: 1vh;
     /* margin-left: 20px; */
   }
   
+  .pages {
+    font-weight: 800;
+    /* width: 5vw; */
+    margin-top: 5vh;
+    height: 5vh;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition: all 700ms ease;
+
+    &:hover {
+      transform: scale(1.1);
+      border-bottom: 4px solid;
+    }
+  }
+
+
   .title {
     color:black;
     font-weight: 800;
@@ -53,6 +80,7 @@ body {
     flex-direction: row;
     width: 10vw;
     margin-top: 5vh;
+    margin-left: 20vw;
     height: 6vh;
     /* margin-right: 2vw; */
   }
@@ -104,10 +132,23 @@ body {
   }
 
   .home {
+    position: absolute;
+    /* top: 50%; */
+    right: -100vw;
     /* height: 50%; */
+    animation: slideRight 2s ease forwards; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @keyframes slideRight {
+    0% {
+      right: -100vh; /* Position initiale */
+    }
+    100% {
+      right: 0; /* Position finale (tout à droite) */
+    }
   }
 
   .project_txt {

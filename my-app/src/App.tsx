@@ -54,6 +54,21 @@ function App()
                 <div className="logo">
                   <img src={logo} alt="Logo" />
                 </div>
+
+                <div className="pages">
+                  Contact
+                </div>
+                <div className="pages">
+                  Projets
+                </div>
+                <div className="pages">
+                  CV
+                </div>
+                <div className="pages">
+                  Competences
+                </div>
+
+
                 <div className="language">
                   <MenuSimple/> 
                   <Switch className="dark_mode" checked={toggleDarkMode} onChange={toggleDarkTheme} defaultChecked />
@@ -77,19 +92,19 @@ function App()
             <div className="project">
                 <div className='project_txt'>Projects</div>
                 <div className = "project_group">
-                  <p className="project_list">- ft_transcendence</p>
+                  <p className="project_list">- Ft_Transcendence</p>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- cloud-1</p>
+                  <p className="project_list">- Cloud-1</p>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- minishell</p>
+                  <p className="project_list">- Minishell</p>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- cube3d</p>
+                  <p className="project_list">- Cube3d</p>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">

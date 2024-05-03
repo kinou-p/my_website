@@ -1,0 +1,15 @@
+version: "3.3" 
+
+services:
+
+  react_app:
+    image: node:latest
+    container_name: react_app
+    working_dir: /app
+    ports:
+      - 80:80
+    volumes:
+      - ./react:/app
+    networks:
+      - pongNetwork
+    entrypoint: ["sh", "-c" , "npm install && npm run start:dev"]

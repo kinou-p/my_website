@@ -3,12 +3,10 @@ import { Button as BaseButton } from '@mui/base/Button';
 import { styled } from '@mui/system';
 import Stack from '@mui/material/Stack';
 
-export default function UnstyledButtonsSimple() {
+export default function ButtonSimple() {
   return (
-    <Stack spacing={2} direction="row">
+    // <Stack spacing={2} direction="row">
       <Button>Mon CV</Button>
-      {/* <Button disabled>Disabled</Button> */}
-    </Stack>
   );
 }
 
@@ -44,14 +42,16 @@ const Button = styled(BaseButton)(
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
-  transition: all 150ms ease;
+  transition: all 200ms ease;
   cursor: pointer;
   border: 1px solid ${blue[500]};
   box-shadow: 0 2px 1px ${
     theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.5)' : 'rgba(45, 45, 60, 0.2)'
   }, inset 0 1.5px 1px ${blue[400]}, inset 0 -2px 1px ${blue[600]};
 
+  
   &:hover {
+    transform: scale(1.1);
     background-color: ${blue[600]};
   }
 

@@ -5,9 +5,11 @@ import background from "./img/background.jpg";
 // import background_dark from "./img/background_dark.jpg";
 import './css/App.css';
 import './css/mine.css';
+import './css/mine_phone.css';
 
 import MenuSimple from './components/language';
-import UnstyledButtonsSimple from './components/button'
+import ButtonSimple from './components/button'
+import MaterialUISwitch from './components/switch'
 
 import { Card, CardContent, CardMedia, Switch, Typography } from "@mui/material"
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -15,8 +17,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { dark } from '@mui/material/styles/createPalette';
 // import { Switch } from '@mui/base/Switch';
 import React, { useState } from "react";
-
 import { FaArrowRightLong } from "react-icons/fa6";
+
+import Button from '@mui/material/Button';
 
 function App()
 {
@@ -41,7 +44,6 @@ function App()
       },
     },
   });
-
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -70,20 +72,22 @@ function App()
 
 
                 <div className="language">
-                  <MenuSimple/> 
-                  <Switch className="dark_mode" checked={toggleDarkMode} onChange={toggleDarkTheme} defaultChecked />
+                  <MenuSimple/>
+                  <MaterialUISwitch onChange={toggleDarkTheme}/>
+                  {/* <Switch className="dark_mode" checked={toggleDarkMode} onChange={toggleDarkTheme} defaultChecked /> */}
                 </div>
               </div>
           </header>
           <div className='home'>
             <div className="presentation">
                 <div className='hello'>Bienvenue.</div>
-                <p className="description">Étudiant a 42 en informatique, je cherche un emploi afin de compléter 
+                <div className="description">Étudiant a 42 en informatique, je cherche un emploi afin de compléter 
                   ma formation académique par une expérience professionnelle qui a du sens. 
                   Je suis ouvert à de nombreuses propositions en rapport avec mes études 
-                  et suis prêt à discuter de mon parcours plus amplement lors d’un entretien.</p>
+                  et suis prêt à discuter de mon parcours plus amplement lors d’un entretien.</div>
                 <div className="cv_button">
-                  <UnstyledButtonsSimple/>
+                  {/* <UnstyledButtonsSimple/> */}
+                  <ButtonSimple/>
                 </div>
                 {/* <div className="project_button"> */}
                   {/* <UnstyledButtonsSimple/> */}

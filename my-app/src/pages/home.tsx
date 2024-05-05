@@ -20,8 +20,8 @@ function Home()
                   ma formation académique par une expérience professionnelle qui a du sens. 
                   Je suis ouvert à de nombreuses propositions en rapport avec mes études 
                   et suis prêt à discuter de mon parcours plus amplement lors d’un entretien.</div> */}
-                  <div>{t("description")}</div>
-                <div className="cv_button">
+                  <div className= "description">{t("description")}</div>
+                <div className= "cv_button">
                   <ButtonSimple/>
                 </div>
             </div>

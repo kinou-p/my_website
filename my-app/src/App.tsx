@@ -6,7 +6,7 @@ import './css/mine_phone.css';
 import Home from './pages/home'
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes, useLocation } from 'react-router-dom';
 import React, { useState } from "react";
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/header';
@@ -39,16 +39,21 @@ function App()
   });
 
   const { i18n, t } = useTranslation();
-
+  // const location = useLocation();
+  
   return (
+    <React.StrictMode>
     <BrowserRouter>
     <CssBaseline />
+    {/* <Router> */}
     <Header/>
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/test" element={<></>}/>
     </Routes>
+    {/* </Router> */}
     </BrowserRouter>
+    </React.StrictMode>
   );
 }
 

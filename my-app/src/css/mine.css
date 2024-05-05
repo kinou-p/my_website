@@ -60,8 +60,8 @@ body {
     /* height: 5vh; */
 
     transition-property: transform;
-    transition-duration: 1s;
-    transition: all 700ms ease;
+    /* transition-duration: 200ms; */
+    transition: all 200ms ease;
 
     &:hover {
       transform: scale(1.1);
@@ -93,9 +93,8 @@ body {
     margin-right: 0vw;
   }
 
-  .css-15bhy65 {
+  /* .css-15bhy65 {
     /* margin-right:  20px; */
-  }
 
   Button{
     font-weight: 800;
@@ -175,9 +174,9 @@ body {
 
   }
   
-  .css-cg7pzv {
+  /* .css-cg7pzv {
     width: 20vw;
-  } 
+  }  */
 
   .project_group {
     font-size: 1vw;
@@ -194,7 +193,7 @@ body {
     margin-right: 2vw;
     /* justify-content: space-between; */
     transition-property: transform;
-    transition-duration: 700ms;
+    transition-duration: 500ms;
     &:hover {
         transform: scale(1.15);
     }

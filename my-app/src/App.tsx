@@ -4,6 +4,10 @@ import './css/mine.css';
 import './css/mine_phone.css';
 
 import Home from './pages/home'
+import Contact from './pages/contact'
+import Projects from './pages/projects'
+import Resume from './pages/resume'
+import Skills from './pages/skills'
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter, Route, Router, Routes, useLocation } from 'react-router-dom';
@@ -14,6 +18,7 @@ import { ColorModeContext } from './utils/color-toggle';
 import { useTranslation } from 'react-i18next';
 
 import "./utils/i18n";
+import Project from './pages/projects';
 
 function App()
 {
@@ -49,7 +54,10 @@ function App()
     <Header/>
     <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/test" element={<></>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/projects" element={<Project/>}/>
+        <Route path="/resume" element={<Resume/>}/>
+        <Route path="/skills" element={<Skills/>}/>
     </Routes>
     {/* </Router> */}
     </BrowserRouter>

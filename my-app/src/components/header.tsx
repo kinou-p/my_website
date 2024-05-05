@@ -32,16 +32,16 @@ function Header()
                 <img src={logo} alt="Logo" />
               </a>
               <div className="pages">
-                {t("page1")}
+                <a href="/contact">{t("page1")}</a>
               </div>
               <div className="pages">
-                {t("page2")}
+                <a href="/projects">{t("page2")}</a>
               </div>
               <div className="pages">
-                {t("page3")}
+                <a href="/resume">{t("page3")}</a>
               </div>
               <div className="pages">
-                {t("page4")}
+                <a href="/skills">{t("page4")}</a>
               </div>
               <div className="language">
                 {/* <MenuSimple/> */}

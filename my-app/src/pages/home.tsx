@@ -28,23 +28,23 @@ function Home()
             <div className="project">
                 <div className='project_txt'>{t("project")}</div>
                 <div className = "project_group">
-                  <p className="project_list">- Ft_Transcendence</p>
+                  <a href="/projects" className="project_list">- Ft_Transcendence</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- Cloud-1</p>
+                  <a href="/projects" className="project_list">- Cloud-1</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- Minishell</p>
+                  <a href="/projects" className="project_list">- Minishell</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- Cube3d</p>
+                  <a href="/projects" className="project_list">- Cube3d</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
-                  <p className="project_list">- Homemade NAS</p>
+                  <a href="/projects" className="project_list">- Homemade NAS</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
             </div>

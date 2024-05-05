@@ -2,11 +2,13 @@ import * as React from 'react';
 import { Button as BaseButton } from '@mui/base/Button';
 import { styled } from '@mui/system';
 import Stack from '@mui/material/Stack';
+import { useTranslation } from 'react-i18next';
 
 export default function ButtonSimple() {
+  const { i18n, t } = useTranslation();
   return (
     // <Stack spacing={2} direction="row">
-      <Button>Mon CV</Button>
+      <Button>{t("resume")}</Button>
   );
 }
 

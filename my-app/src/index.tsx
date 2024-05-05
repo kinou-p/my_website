@@ -5,7 +5,7 @@ import App from './App';
 // import ColorModeProvider from './utils/color-toggle';
 import reportWebVitals from './reportWebVitals';
 
-
+import "./utils/i18n";
 import { ColorModeProvider } from "./utils/color-toggle"
 
 const root = ReactDOM.createRoot(

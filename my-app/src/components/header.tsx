@@ -1,63 +1,70 @@
 import MenuSimple from './language';
 import MaterialUISwitch from './switch'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-// import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React, { useState, useContext } from "react";
-
 import logo from '../img/first.jpg';
 
-// import { ColorModeContext } from '../utils/color-toggle'
-
-// const theme = useTheme()
-// const colorMode = React.useContext(ColorModeContext);
-
 import { ColorModeContext } from '../utils/color-toggle';
+import { useTranslation } from 'react-i18next';
 
-// const { ColorMode, setColorMode } = useColorMode();
-
+import ReactCountryFlag from "react-country-flag"
+import { FormControl } from 'react-bootstrap';
+import { Box, InputLabel, MenuItem} from '@mui/material';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 function Header()
 {
-    
+    const { i18n, t } = useTranslation();
     const { changeMode } = useContext(ColorModeContext);
-    // const { colorMode, setColorMode } = changeMode();
+    const [language, setLanguage] = useState(1);
 
-    // const toggleColorMode = () => {
-    //     // Call setColorMode and pass the new color mode value
-    //     setColorMode(colorMode === 'light' ? 'dark' : 'light');
-    // };
+    function handleChange() {
+        // i18n.language
+        i18n.changeLanguage(language ? 'en' : 'fr')
+        setLanguage(language ? 0 : 1)
+    }
+
 
     return (
-        // <ThemeProvider theme={darkTheme}>
         <header>
-            <div className="header-content">
-              {/* <h1 className="title">A.P</h1> */}
-              <div className="logo">
+            <div  className="header-content">
+              <a className="logo" href="/">
                 <img src={logo} alt="Logo" />
-              </div>
-
+              </a>
               <div className="pages">
-                Contact
-              </div>
-              <div className="pages">
-                Projets
+                {t("page1")}
               </div>
               <div className="pages">
-                CV
+                {t("page2")}
               </div>
               <div className="pages">
-                Competences
+                {t("page3")}
               </div>
-
-
+              <div className="pages">
+                {t("page4")}
+              </div>
               <div className="language">
-                <MenuSimple/>
+                {/* <MenuSimple/> */}
+                <Box sx={{ minWidth: 120 }}>
+                {/* <FormControl > */}
+                  {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={language}
+                    // label="Age"
+                    onChange={handleChange}
+                  >
+                    <MenuItem value={0}><ReactCountryFlag countryCode="GB" svg/></MenuItem>
+                    <MenuItem value={1}><ReactCountryFlag countryCode="FR" svg/></MenuItem>
+                  </Select>
+                {/* </FormControl> */}
+                </Box>
+
                 <MaterialUISwitch onChange={changeMode}/>
-                {/* <Switch className="dark_mode" checked={toggleDarkMode} onChange={toggleDarkTheme} defaultChecked /> */}
               </div>
             </div>
         </header>
-        // </ThemeProvider>
     )
 }
 

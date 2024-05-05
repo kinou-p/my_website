@@ -11,8 +11,9 @@ import React, { useState } from "react";
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/header';
 import { ColorModeContext } from './utils/color-toggle';
+import { useTranslation } from 'react-i18next';
 
-
+import "./utils/i18n";
 
 function App()
 {
@@ -36,6 +37,8 @@ function App()
       },
     },
   });
+
+  const { i18n, t } = useTranslation();
 
   return (
     <BrowserRouter>

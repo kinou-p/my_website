@@ -1,0 +1,52 @@
+.s_20{
+	font-size: 5vh;
+	font-weight: 800;
+}
+
+img {
+	max-width: inherit;
+	max-height: inherit;
+	height: inherit;
+	width: inherit;
+}
+
+.project_page {
+	overflow: hidden;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	height: 85vh;
+	/* justify-content: left; */
+}
+
+.project_detail {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15vh;
+	margin-left: 10vw;
+}
+
+.project_description{
+	margin-top: 25vh;
+	margin-left: 10vh;
+	max-width: 40%;
+}
+
+.project_image {
+	width: 40vw;
+	/* max-height: 30%; */
+}
+
+.badge_list {
+	width: 100%;
+	display: flex;
+	align-self: center;
+
+	justify-content: space-evenly;
+	/* align-items: center; */
+}
+
+.badge {
+	height: 5vh;
+}

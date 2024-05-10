@@ -31,6 +31,7 @@ i18n
           project:"Projects",
           welcome:"Welcome.",
           resume:"My Resume",
+          contact_me:"CONTACT ME",
         },
       },
       fr: {
@@ -44,6 +45,7 @@ i18n
           project:"Projets",
           welcome:"Bienvenue.",
           resume:"Mon CV",
+          contact_me:"CONTACTEZ MOI",
         },
       },
     },

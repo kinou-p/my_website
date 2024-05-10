@@ -1,7 +1,8 @@
 import MenuSimple from './language';
 import MaterialUISwitch from './switch'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-import React, { useState, useContext } from "react";
+import React, { useState, useContext} from "react";
+import { useEffect } from "react";
 import logo from '../img/first.jpg';
 
 import { ColorModeContext } from '../utils/color-toggle';
@@ -17,13 +18,50 @@ function Header()
     const { i18n, t } = useTranslation();
     const { changeMode } = useContext(ColorModeContext);
     const [language, setLanguage] = useState(1);
+    const [mode, setMode] = useState("dark");
+    // const [checked, setChecked] = useState(1);
+    const [checked, setChecked] = React.useState(true);
+
+    useEffect(() => {
+      if (!localStorage.getItem('language'))
+        localStorage.setItem('language', 'en');
+      else
+      {
+        let current = localStorage.getItem('language')
+        if (current == 'en')
+        {
+          setLanguage(current ? 0 : 1)
+          i18n.changeLanguage(current)
+        }
+      }
+
+      if (!localStorage.getItem('mode'))
+        localStorage.setItem('mode', 'dark');
+      else
+      {
+        let current = localStorage.getItem('mode')
+        if (current == "light")
+        {
+          changeMode()
+          setChecked(false)
+        }
+      }
+
+
+    }, []);
 
     function handleChange() {
-        // i18n.language
         i18n.changeLanguage(language ? 'en' : 'fr')
+        localStorage.setItem('language', language ? 'en' : 'fr');
         setLanguage(language ? 0 : 1)
     }
 
+    function handleMode() {
+        let current = localStorage.getItem('mode')
+        localStorage.setItem('mode', current == 'light' ? 'dark' : 'light');
+        changeMode()
+        setChecked(checked ? false : true)
+    }
 
     return (
         <header>
@@ -61,7 +99,7 @@ function Header()
                 {/* </FormControl> */}
                 </Box>
 
-                <MaterialUISwitch onChange={changeMode}/>
+                <MaterialUISwitch checked={checked} onChange={handleMode}/>
               </div>
             </div>
         </header>
@@ -69,3 +107,7 @@ function Header()
 }
 
 export default Header;
+
+// function useEffect(arg0: () => void, arg1: number[]) {
+//   throw new Error('Function not implemented.');
+// }

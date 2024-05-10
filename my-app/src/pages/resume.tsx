@@ -1,10 +1,19 @@
-function Resume()
+import React from 'react';
+import resume from "../img/cv.jpg";
+
+function Resume ()
 {
-    return (	
+
+    return (
         <div className="resume">
-            resume here , pdf ?
-	    </div>
-    )
+            <div className="resume_jpg">
+                <img src={resume}/>
+            </div>
+        </div>
+    );
 };
 
 export default Resume;
+
+
+

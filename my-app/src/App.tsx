@@ -1,7 +1,9 @@
 
 import './css/App.css';
 import './css/mine.css';
+import './css/project.css';
 import './css/mine_phone.css';
+import './css/contact.css';
 
 import Home from './pages/home'
 import Contact from './pages/contact'
@@ -47,11 +49,11 @@ function App()
   // const location = useLocation();
   
   return (
-    <React.StrictMode>
+    // <React.StrictMode>
     <BrowserRouter>
     <CssBaseline />
     {/* <Router> */}
-    <Header/>
+    <Header/> 
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/contact" element={<Contact/>}/>
@@ -61,7 +63,7 @@ function App()
     </Routes>
     {/* </Router> */}
     </BrowserRouter>
-    </React.StrictMode>
+    // </React.StrictMode>
   );
 }
 

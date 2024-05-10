@@ -3,6 +3,7 @@ import ButtonSimple from '../components/button'
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
+import Button from '@mui/material/Button';
 
 function Home()
 {
@@ -22,7 +23,9 @@ function Home()
                   et suis prêt à discuter de mon parcours plus amplement lors d’un entretien.</div> */}
                   <div className= "description">{t("description")}</div>
                 <div className= "cv_button">
-                  <ButtonSimple/>
+                  <a className="button" href="/resume">
+                    {t("resume")}
+                  </a>
                 </div>
             </div>
             <div className="project">

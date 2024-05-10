@@ -40,25 +40,21 @@ const Button = styled(BaseButton)(
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
-  background-color: ${blue[500]};
+  background-color: '#007FFF';
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
   transition: all 200ms ease;
   cursor: pointer;
-  border: 1px solid ${blue[500]};
-  box-shadow: 0 2px 1px ${
-    theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.5)' : 'rgba(45, 45, 60, 0.2)'
-  }, inset 0 1.5px 1px ${blue[400]}, inset 0 -2px 1px ${blue[600]};
-
+  border: 1px solid '#007FFF';
   
   &:hover {
     transform: scale(1.1);
-    background-color: ${blue[600]};
+    background-color: '#0072E5';
   }
 
   &:active {
-    background-color: ${blue[700]};
+    background-color: '#0066CC';
     box-shadow: none;
     transform: scale(0.99);
   }

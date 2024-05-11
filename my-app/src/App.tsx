@@ -11,6 +11,12 @@ import Projects from './pages/projects'
 import Resume from './pages/resume'
 import Skills from './pages/skills'
 
+import Ft_transcendence from './pages/projects/ft_transcendence'
+import Nas from './pages/projects/nas'
+
+
+
+
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter, Route, Router, Routes, useLocation } from 'react-router-dom';
 import React, { useState } from "react";
@@ -58,6 +64,9 @@ function App()
         <Route path="/" element={<Home/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/projects" element={<Project/>}/>
+        <Route path="/projects/nas" element={<Nas/>}/>
+        <Route path="/projects/ft_transcendence" element={<Ft_transcendence/>}/>
+
         <Route path="/resume" element={<Resume/>}/>
         <Route path="/skills" element={<Skills/>}/>
     </Routes>

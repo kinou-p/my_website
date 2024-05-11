@@ -31,7 +31,11 @@ function Home()
             <div className="project">
                 <div className='project_txt'>{t("project")}</div>
                 <div className = "project_group">
-                  <a href="/projects" className="project_list">- Ft_Transcendence</a>
+                  <a href="/projects/nas" className="project_list">- Homemade NAS</a>
+                  <FaArrowRightLong className="arrow"/>
+                </div>
+                <div className = "project_group">
+                  <a href="/projects/ft_transcendence" className="project_list">- Ft_Transcendence</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
                 <div className = "project_group">
@@ -44,10 +48,6 @@ function Home()
                 </div>
                 <div className = "project_group">
                   <a href="/projects" className="project_list">- Cube3d</a>
-                  <FaArrowRightLong className="arrow"/>
-                </div>
-                <div className = "project_group">
-                  <a href="/projects" className="project_list">- Homemade NAS</a>
                   <FaArrowRightLong className="arrow"/>
                 </div>
             </div>

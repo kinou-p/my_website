@@ -11,7 +11,7 @@ img {
 }
 
 .project_page {
-	overflow: hidden;
+	/* overflow: hidden; */
 	margin: auto;
 	display: flex;
 	flex-direction: row;
@@ -63,7 +63,41 @@ img {
 
 
 .project_home {
-	margin-top: 20vh;
+	/* margin-top: 20vh; */
 	width: 100vw;
-	margin-left: 45vw;
+	margin-left: 35vw;
+}
+
+
+
+
+
+@media screen and (max-width: 992px){
+	.project_page {
+		text-align: center;
+		/* overflow: hidden; */
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		height: 85vh;
+		justify-content: center;
+		align-items: center;
+	}
+	.project_detail {
+		margin: 0;
+	}
+	
+	.project_description{
+
+		margin: 0;
+		max-width: 80%;
+		/* margin-left: 10vw; */
+	}
+	.project_image {
+		margin-top: 10vh;
+		width: 80vw;
+		/* margin-left: 10vw; */
+		/* max-height: 30%; */
+	}
 }

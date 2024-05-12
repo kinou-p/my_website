@@ -13,6 +13,11 @@ import { FormControl } from 'react-bootstrap';
 import { Box, InputLabel, MenuItem} from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+import Menu from '@mui/material/Menu';
+// import MenuItem from '@mui/material/MenuItem';
+import PopupState, { bindHover, bindMenu } from 'material-ui-popup-state';
+import Button from '@mui/material/Button';
+
 function Header()
 {
     const { i18n, t } = useTranslation();
@@ -69,6 +74,29 @@ function Header()
               <a className="logo" href="/">
                 <img src={logo} alt="Logo" />
               </a>
+
+
+
+
+            {/* <PopupState variant="popover" popupId="demo-popup-menu">
+              {(popupState) => (
+                <React.Fragment>
+                  <Button  className="pages" href="/skills" {...bindHover(popupState)}>
+                    {t("page2")}
+                  </Button>
+                  <Menu {...bindMenu(popupState)}>
+                    <MenuItem onClick={popupState.close}>Profile</MenuItem>
+                    <MenuItem onClick={popupState.close}>My account</MenuItem>
+                    <MenuItem onClick={popupState.close}>Logout</MenuItem>
+                  </Menu>
+                </React.Fragment>
+              )}
+            </PopupState> */}
+
+
+
+
+
 
               <div className="menu">
                 <div className="pages">

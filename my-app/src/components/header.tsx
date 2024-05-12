@@ -3,7 +3,7 @@ import MaterialUISwitch from './switch'
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import React, { useState, useContext} from "react";
 import { useEffect } from "react";
-import logo from '../img/first.jpg';
+import logo from '../img/logo.png';
 
 import { ColorModeContext } from '../utils/color-toggle';
 import { useTranslation } from 'react-i18next';
@@ -69,18 +69,24 @@ function Header()
               <a className="logo" href="/">
                 <img src={logo} alt="Logo" />
               </a>
-              <div className="pages">
-                <a href="/contact">{t("page1")}</a>
+
+              <div className="menu">
+                <div className="pages">
+                  <a href="/projects">{t("page2")}</a>
+                </div>
+                <div className="pages">
+                  <a href="/skills">{t("page4")}</a>
+                </div>
+                <div className="pages">
+                  <a href="/contact">{t("page1")}</a>
+                </div>
+                <div className="pages">
+                  <a href="/resume">{t("page3")}</a>
+                </div>
               </div>
-              <div className="pages">
-                <a href="/projects">{t("page2")}</a>
-              </div>
-              <div className="pages">
-                <a href="/resume">{t("page3")}</a>
-              </div>
-              <div className="pages">
-                <a href="/skills">{t("page4")}</a>
-              </div>
+
+
+
               <div className="language">
                 {/* <MenuSimple/> */}
                 <Box sx={{ minWidth: 120 }}>

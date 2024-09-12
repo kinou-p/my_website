@@ -7,8 +7,8 @@ function Nas()
     return (	
 		<div className="project_page">
 			<div className="project_description">
-				<div className="s_20" >Homemade NAS</div>
-				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae turpis sit amet sem scelerisque lobortis. Phasellus eleifend sollicitudin egestas. Sed quis augue condimentum, facilisis mi scelerisque, luctus leo. Sed imperdiet ultricies elit, sit amet varius mauris. Donec auctor sed ipsum eget dictum. Quisque convallis dictum elit, ac malesuada quam condimentum at. Fusce iaculis sapien et ante lobortis volutpat eget eu enim.</div>
+				<div className="s_20" >Homemade Server</div>
+                <a> {t("nas")} </a>
 			</div>
 			<div className="project_detail">
                 <div className='project_image'>

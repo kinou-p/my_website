@@ -13,6 +13,9 @@ import Skills from './pages/skills'
 
 import Ft_transcendence from './pages/projects/ft_transcendence'
 import Nas from './pages/projects/nas'
+import Minishell from './pages/projects/minishell'
+import Cloud_1 from './pages/projects/cloud_1'
+import Cube3d from './pages/projects/cube3d'
 
 
 
@@ -56,10 +59,11 @@ function App()
   
   return (
     // <React.StrictMode>
+    <div>
+    <Header/>
     <BrowserRouter>
     <CssBaseline />
     {/* <Router> */}
-    <Header/> 
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/contact" element={<Contact/>}/>
@@ -67,11 +71,19 @@ function App()
         <Route path="/projects/nas" element={<Nas/>}/>
         <Route path="/projects/ft_transcendence" element={<Ft_transcendence/>}/>
 
+        <Route path="/projects/cloud_1" element={<Cloud_1/>}/>
+        <Route path="/projects/minishell" element={<Minishell/>}/>
+        <Route path="/projects/cube3d" element={<Cube3d/>}/>
+
+
+
         <Route path="/resume" element={<Resume/>}/>
         <Route path="/skills" element={<Skills/>}/>
     </Routes>
     {/* </Router> */}
     </BrowserRouter>
+
+    </div>
     // </React.StrictMode>
   );
 }

@@ -72,7 +72,7 @@ img {
 
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 	.project_page {
 		text-align: center;
 		/* overflow: hidden; */

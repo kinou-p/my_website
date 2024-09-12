@@ -17,15 +17,15 @@ function Project()
           <FaArrowRightLong className="arrow"/>
         </div>
         <div className = "project_group">
-          <a href="/projects" className="project_list">- Cloud-1</a>
+          <a href="/projects/cloud_1" className="project_list">- Cloud-1</a>
           <FaArrowRightLong className="arrow"/>
         </div>
         <div className = "project_group">
-          <a href="/projects" className="project_list">- Minishell</a>
+          <a href="/projects/minishell" className="project_list">- Minishell</a>
           <FaArrowRightLong className="arrow"/>
         </div>
         <div className = "project_group">
-          <a href="/projects" className="project_list">- Cube3d</a>
+          <a href="/projects/cube3d" className="project_list">- Cube3d</a>
           <FaArrowRightLong className="arrow"/>
         </div>
     </div>

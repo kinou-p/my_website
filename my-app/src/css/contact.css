@@ -23,10 +23,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center; 
-	text-align: center
+	text-align: center;
 	/* vertical-align: middle */
 	/* align-self: center; */
 }
+
+.contact_box {
+	transition-property: transform;
+    transition: all 200ms ease;
+
+    &:hover {
+      transform: scale(1.1);
+      border-bottom: 2px solid;
+    }
+	/* vertical-align: middle */
+	/* align-self: center; */
+}
+
 
 .contact_badge {
 	margin-top: 3vh;

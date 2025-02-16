@@ -5,14 +5,18 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
 import Button from '@mui/material/Button';
 
+import React, { useEffect } from 'react';
+
 function Home()
 {
-
     const { i18n, t } = useTranslation();
+
+    useEffect(() => {
+      i18n.changeLanguage(i18n.language);
+  }, [i18n.language]);
 
     return(
       <div>
-        <body>
           {/* <Header/> */}
           <div className='home'>
             <div className="presentation">
@@ -22,11 +26,6 @@ function Home()
                   Je suis ouvert à de nombreuses propositions en rapport avec mes études 
                   et suis prêt à discuter de mon parcours plus amplement lors d’un entretien.</div> */}
                   <div className= "description">{t("description")}</div>
-                {/* <div className= "cv_button">
-                  <a className="button" href="/resume">
-                    {t("resume")}
-                  </a>
-                </div> */}
             </div>
             <div className="project">
                 <div className='project_txt'>{t("project")}</div>
@@ -52,7 +51,6 @@ function Home()
                 </div>
             </div>
           </div>
-        </body>
       </div>
     )
 }

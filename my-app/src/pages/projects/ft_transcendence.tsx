@@ -1,9 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import img from '../../img/pong.webp';
+import React, { useEffect } from 'react';
 
 function Ft_transcendence()
 {
     const { i18n, t } = useTranslation();
+    useEffect(() => {
+        i18n.changeLanguage(i18n.language);
+    }, [i18n.language]);
     return (	
 		<div className="project_page">
 			<div className="project_description">

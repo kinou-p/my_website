@@ -1,9 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import img from '../../img/bash.png';
+import React, { useEffect } from 'react';
 
 function Minishell()
 {
     const { i18n, t } = useTranslation();
+    useEffect(() => {
+        i18n.changeLanguage(i18n.language);
+    }, [i18n.language]);
     return (	
 		<div className="project_page">
 			<div className="project_description">

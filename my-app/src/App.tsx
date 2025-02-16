@@ -27,6 +27,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/header';
 import { ColorModeContext } from './utils/color-toggle';
 import { useTranslation } from 'react-i18next';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './utils/i18n'; // Assuming you have a separate i18n config file
 
 import "./utils/i18n";
 import Project from './pages/projects';
@@ -60,6 +62,7 @@ function App()
   return (
     // <React.StrictMode>
     <div>
+    <I18nextProvider i18n={i18n}>
     <Header/>
     <BrowserRouter>
     <CssBaseline />
@@ -82,7 +85,7 @@ function App()
     </Routes>
     {/* </Router> */}
     </BrowserRouter>
-
+    </I18nextProvider>
     </div>
     // </React.StrictMode>
   );

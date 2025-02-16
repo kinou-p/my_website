@@ -1,13 +1,17 @@
 import { useTranslation } from "react-i18next";
+import React, { useEffect } from 'react';
 
 function Contact()
 {
 	const { i18n, t } = useTranslation();
+	useEffect(() => {
+	  i18n.changeLanguage(i18n.language);
+  	}, [i18n.language]);
 
 	return (
 		<div className="contact_page">
 			<div className="contact_title">{t("contact_me")}</div>
-			<svg className="badge contact_badge" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 2C9 1.44772 9.44772 1 10 1H14C14.5523 1 15 1.44772 15 2V3C15 3.55228 14.5523 4 14 4H10C9.44772 4 9 3.55228 9 3V2Z" fill="#000000"/><rect x="5.75" y="1.75" width="12.5" height="20.5" rx="1.75" stroke="#000000" stroke-width="1.5"/><path d="M9 19.5H15" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/></svg>
+			<svg className="badge contact_badge" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 2C9 1.44772 9.44772 1 10 1H14C14.5523 1 15 1.44772 15 2V3C15 3.55228 14.5523 4 14 4H10C9.44772 4 9 3.55228 9 3V2Z" fill="#000000"/><rect x="5.75" y="1.75" width="12.5" height="20.5" rx="1.75" stroke="#000000" strokeWidth="1.5"/><path d="M9 19.5H15" stroke="#000000" strokeWidth="1.5" strokeLinecap="round"/></svg>
 			<div className="contact_list">
 				<a className="contact_box" href="tel:+33652403830">
 					06.52.40.38.30

@@ -2,9 +2,15 @@ import { useTranslation } from 'react-i18next';
 import img from '../img/pong.webp';
 import { FaArrowRightLong } from "react-icons/fa6";
 
+import React, { useEffect } from 'react';
+
 function Project()
 {
     const { i18n, t } = useTranslation();
+    useEffect(() => {
+      i18n.changeLanguage(i18n.language);
+    }, [i18n.language]);
+    
     return (	
         <div className="project project_home">
         <div className='project_txt'>{t("project")}</div>

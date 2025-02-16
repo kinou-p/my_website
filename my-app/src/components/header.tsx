@@ -108,9 +108,9 @@ function Header()
                 <div className="pages">
                   <a href="/contact">{t("page1")}</a>
                 </div>
-                <div className="pages">
+                {/* <div className="pages">
                   <a href="/resume">{t("page3")}</a>
-                </div>
+                </div> */}
               </div>
 
 

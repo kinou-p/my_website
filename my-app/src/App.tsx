@@ -77,7 +77,7 @@ function App()
 
 
 
-        <Route path="/resume" element={<Resume/>}/>
+        {/* <Route path="/resume" element={<Resume/>}/> */}
         <Route path="/skills" element={<Skills/>}/>
     </Routes>
     {/* </Router> */}

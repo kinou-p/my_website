@@ -22,11 +22,11 @@ function Home()
                   Je suis ouvert à de nombreuses propositions en rapport avec mes études 
                   et suis prêt à discuter de mon parcours plus amplement lors d’un entretien.</div> */}
                   <div className= "description">{t("description")}</div>
-                <div className= "cv_button">
+                {/* <div className= "cv_button">
                   <a className="button" href="/resume">
                     {t("resume")}
                   </a>
-                </div>
+                </div> */}
             </div>
             <div className="project">
                 <div className='project_txt'>{t("project")}</div>

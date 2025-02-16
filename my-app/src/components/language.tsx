@@ -102,10 +102,10 @@ const Listbox = styled('ul')(
   `,
 );
 
-const AnimatedListbox = React.forwardRef(function AnimatedListbox(
-  props: MenuListboxSlotProps,
-  ref: React.ForwardedRef<HTMLUListElement>,
-) {
+const AnimatedListbox = React.forwardRef<
+  HTMLUListElement,
+  Omit<MenuListboxSlotProps, "ref">
+>(function AnimatedListbox(props, ref) {
   const { ownerState, ...other } = props;
   const popupContext = React.useContext(PopupContext);
 
@@ -127,6 +127,7 @@ const AnimatedListbox = React.forwardRef(function AnimatedListbox(
     </CssTransition>
   );
 });
+
 
 const MenuItem = styled(BaseMenuItem)(
   ({ theme }) => `

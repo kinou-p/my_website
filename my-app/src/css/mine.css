@@ -80,11 +80,11 @@ body {
     display: flex;
     flex-direction: row;
     width: 50vw;
-    margin-right: 7vw;
-    /* align-self: flex-end; */
-    justify-content: right;
-    /* float: right; */
-  }
+    /* margin: 0 auto; Centers the menu horizontally */
+    margin-left: 7vw;
+    justify-content: center; /* Centers the menu items inside */
+}
+
   
   .title {
     color:black;

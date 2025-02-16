@@ -14,7 +14,8 @@ function Header() {
     const storedLanguage = localStorage.getItem('language') || 'en';
 
     const [language, setLanguage] = useState(storedLanguage);
-    const [checked, setChecked] = useState(localStorage.getItem('mode') === 'light' ? false : true);
+    const [mode, setMode] = useState("dark");
+    const [checked, setChecked] = React.useState(true);
 
     useEffect(() => {
         i18n.changeLanguage(language); // Apply saved language
@@ -22,22 +23,29 @@ function Header() {
     }, [language, i18n]); // Re-run effect if language changes
 
     useEffect(() => {
-        if (localStorage.getItem('mode') === 'light') {
-            changeMode();
-            setChecked(false);
+      if (!localStorage.getItem('mode'))
+        localStorage.setItem('mode', 'dark');
+      else
+      {
+        let current = localStorage.getItem('mode')
+        if (current == "light")
+        {
+          changeMode()
+          setChecked(false)
         }
-    }, [changeMode]);
+      }
+    }, []);
 
     function handleLanguageChange(event: SelectChangeEvent) {
         const newLang = event.target.value;
         setLanguage(newLang); // Update state
     }
 
-    function handleModeToggle() {
-        const newMode = checked ? 'dark' : 'light';
-        localStorage.setItem('mode', newMode);
-        changeMode();
-        setChecked(!checked);
+    function handleMode() {
+        let current = localStorage.getItem('mode')
+        localStorage.setItem('mode', current == 'light' ? 'dark' : 'light');
+        changeMode()
+        setChecked(checked ? false : true)
     }
 
     return (
@@ -73,7 +81,7 @@ function Header() {
                             </MenuItem>
                         </Select>
                     </Box>
-                    <MaterialUISwitch checked={checked} onChange={handleModeToggle} />
+                    <MaterialUISwitch checked={checked} onChange={handleMode} />
                 </div>
             </div>
         </header>
